@@ -7,6 +7,11 @@ import Logo from '../images/bragas-car-care-detailing-logo.png'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import '../css/hero.css'
+import Facebook from '../../resources/icons/facebook.svg'
+import Instagram from '../../resources/icons/instagram.svg'
+import Whatsapp from '../../resources/icons/whatsapp.svg'
+import Mail from '../../resources/icons/mail.svg'
+import Phone from '../../resources/icons/phone.svg'
 
 const IndexPage = ({ data }) => {
   return (
@@ -15,14 +20,14 @@ const IndexPage = ({ data }) => {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title='Home'
       />
-      <section className='text-lg text-gray-100'>
+      <section className='text-xl text-gray-100'>
         {/* Hero Section */}
 
         <section className='relative w-full h-screen overflow-hidden transform -skew-y-12 bg-blue-900'>
           <header>
             <img src={Logo} alt='Braga`s Car Care Detailing' />
           </header>
-          <nav className='absolute top-0 z-50 items-center mt-20 ml-96'>
+          <nav className='absolute top-0 z-50 items-center mt-20 ml-80'>
             <ul className='z-50 flex items-center justify-center uppercase'>
               <a href='#about'>
                 <li className='hover:text-orange-500'>About</li>
@@ -32,9 +37,6 @@ const IndexPage = ({ data }) => {
               </a>
               <a className='ml-3' href='#services'>
                 <li className='hover:text-orange-500'>Services</li>
-              </a>
-              <a className='ml-3' href='#contact'>
-                <li className='hover:text-orange-500'>Contact</li>
               </a>
             </ul>
           </nav>
@@ -52,7 +54,7 @@ const IndexPage = ({ data }) => {
                 provides mobile car washing and detailing services!
               </p>
             </div>
-            <div className='w-4/12 h-auto mt-6 ml-6 overflow-hidden'>
+            <div className='w-4/12 h-auto mt-10 ml-12 overflow-hidden'>
               <Img
                 className='border-4 border-orange-600 border-solid'
                 fadeIn={false}
@@ -116,7 +118,7 @@ const IndexPage = ({ data }) => {
         <section className='transform -skew-y-12 bg-blue-900'>
           <section id='services' className='w-full h-auto bg-blue-900'>
             <div className='flex items-start justify-center w-full h-full p-16'>
-              <div className='w-4/12 mt-24 transform skew-y-12'>
+              <div className='w-4/12 mt-24 ml-64 transform skew-y-12'>
                 <h2 className='mb-3 text-3xl text-gray-100'>
                   Interior Services
                 </h2>
@@ -126,7 +128,7 @@ const IndexPage = ({ data }) => {
                   be spot treated, shampooed & cleaned.
                 </p>
               </div>
-              <div className='w-4/12 h-auto ml-6 overflow-hidden'>
+              <div className='w-3/12 h-auto ml-6 overflow-hidden'>
                 <Img
                   className='border-4 border-orange-600 border-solid'
                   fluid={data.bragasOne.childImageSharp.fluid}
@@ -137,18 +139,16 @@ const IndexPage = ({ data }) => {
 
           {/* Service Two */}
 
-          <section className='w-full h-auto'>
+          <section className='w-full h-auto text-gray-100 bg-blue-800'>
             <div className='flex items-start justify-center w-full h-full p-16'>
-              <div className='w-4/12 h-auto overflow-hidden'>
+              <div className='w-3/12 h-auto overflow-hidden'>
                 <Img
                   className='border-4 border-orange-600 border-solid'
                   fluid={data.bragasTwo.childImageSharp.fluid}
                 />
               </div>
-              <div className='w-4/12 mt-24 ml-12 transform skew-y-12'>
-                <h2 className='mb-3 text-3xl text-gray-100'>
-                  Exterior Services
-                </h2>
+              <div className='w-4/12 mt-24 ml-12 mr-64 transform skew-y-12'>
+                <h2 className='mb-3 text-3xl'>Exterior Services</h2>
                 <p className='text-lg'>
                   Complete exterior detailing including washing your vehicle,
                   claying the paint, removal of bugs/tar and preparing your car
@@ -164,7 +164,7 @@ const IndexPage = ({ data }) => {
 
           <section className='w-full h-auto'>
             <div className='flex items-start justify-center w-full h-full p-16 bg-blue-900'>
-              <div className='w-4/12 mt-24 transform skew-y-12'>
+              <div className='w-4/12 mt-24 ml-64 transform skew-y-12'>
                 <h2 className='mb-3 text-3xl'>Engine Cleaning & Dressing</h2>
                 <p className='text-lg'>
                   Engines will be cleaned using the finest products to remove
@@ -173,7 +173,7 @@ const IndexPage = ({ data }) => {
                   longer.
                 </p>
               </div>
-              <div className='w-4/12 h-auto ml-6 overflow-hidden'>
+              <div className='w-3/12 h-auto ml-6 overflow-hidden'>
                 <Img
                   className='border-4 border-orange-600 border-solid'
                   fluid={data.bragasThree.childImageSharp.fluid}
@@ -182,17 +182,47 @@ const IndexPage = ({ data }) => {
             </div>
           </section>
         </section>
-        {/* Contact Section */}
-
-        <section
-          id='contact'
-          className='w-full transform -skew-y-12 bg-blue-800 h-128'
-        ></section>
 
         {/* Footer Section */}
 
         <footer className='flex items-end justify-end w-full h-full text-gray-900'>
-          <h1>hello world</h1>
+          <div className='mt-6 mr-24'>
+            <div className='flex items-center justify-start mb-4'>
+              {/* <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
+              <img
+                className='w-6 h-6 mr-6'
+                src={Facebook}
+                alt='facebook icon'
+              />
+              <img
+                className='w-6 h-6 mr-6'
+                src={Instagram}
+                alt='instagram icon'
+              />
+              <img
+                className='w-6 h-6 mr-6'
+                src={Whatsapp}
+                alt='whatsapp icon'
+              />
+              <img className='w-6 h-6 mr-6' src={Mail} alt='mail icon' />
+              <img className='w-6 h-6 mr-6' src={Phone} alt='phone icon' />
+            </div>
+            <p className='mb-4'>
+              Copyright ©Braga`s Car Care Detailing, {new Date().getFullYear()}.
+              All rights reserved.
+            </p>
+            <p>
+              JAMstack Website by{' '}
+              <a
+                className='text-green-500 hover:text-green-300'
+                href='https://chaddwebdesign.co.za'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Chadd Web Design
+              </a>
+            </p>
+          </div>
         </footer>
       </section>
     </Layout>
