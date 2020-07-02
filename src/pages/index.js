@@ -29,30 +29,47 @@ const IndexPage = ({ data }) => {
           </header>
           <nav className='absolute top-0 z-50 items-center mt-20 ml-80'>
             <ul className='z-50 flex items-center justify-center uppercase'>
-              <a href='#about'>
-                <li className='hover:text-orange-500'>About</li>
-              </a>
-              <a className='ml-3' href='#benefits'>
-                <li className='hover:text-orange-500'>Benefits</li>
-              </a>
-              <a className='ml-3' href='#services'>
-                <li className='hover:text-orange-500'>Services</li>
-              </a>
+              <li>
+                <a className='hover:text-orange-500' href='#about'>
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a className='ml-3 hover:text-orange-500' href='#benefits'>
+                  Benefits
+                </a>
+              </li>
+
+              <li>
+                <a className='ml-3 hover:text-orange-500' href='#services'>
+                  Services
+                </a>
+              </li>
             </ul>
           </nav>
           <div className='absolute top-0 left-0 flex items-start justify-center w-full h-full mt-16'>
             <div className='w-4/12 mt-24 transform skew-y-12'>
-              <h1 className='mt-24 mb-6 text-4xl text-blue-400'>
+              <h1 className='mt-24 mb-6 text-4xl text-orange-500'>
                 Mobile Auto Detailing in Oudtshoorn
               </h1>
               <h2 className='mb-3 text-2xl text-gray-100'>
                 We Come Straight to You to Provide the Best Detailing Service in
                 the Klein Karoo!
               </h2>
-              <p className='mb-3 text-xl text-gray-100'>
+              <p className='mb-6 text-xl text-gray-100'>
                 Braga`s Care Car Detailers is an Oudtshoorn based company that
                 provides mobile car washing and detailing services!
               </p>
+              <a
+                href='https://wa.me/0721444279'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <button className='p-3 text-2xl uppercase bg-orange-600 rounded-md shadow-lg button-transition hover:bg-orange-400 focus:outline-none'>
+                  <h3>Book Now</h3>
+                </button>
+              </a>
             </div>
             <div className='w-4/12 h-auto mt-10 ml-12 overflow-hidden'>
               <Img
