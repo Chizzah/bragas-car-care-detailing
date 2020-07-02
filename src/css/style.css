@@ -3,3 +3,18 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+}
